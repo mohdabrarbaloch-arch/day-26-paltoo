@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paltoo"
+version = "1.0.0"
+description = "Pet care & vet appointment platform for Pakistan — pets, vaccines, reminders, bookings."
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["B008", "SIM108"]
+
+[tool.black]
+line-length = 100
